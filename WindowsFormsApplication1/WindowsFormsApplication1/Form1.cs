@@ -21,5 +21,10 @@ namespace WindowsFormsApplication1
         {
            
         }
+
+        private void home1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

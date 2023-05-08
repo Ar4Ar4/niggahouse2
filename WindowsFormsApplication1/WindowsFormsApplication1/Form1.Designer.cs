@@ -30,12 +30,13 @@
         {
             this.userControl11 = new WindowsFormsApplication1.UserControl1();
             this.register1 = new WindowsFormsApplication1.Register();
+            this.home1 = new WindowsFormsApplication1.Home();
             this.SuspendLayout();
             // 
             // userControl11
             // 
             this.userControl11.AccessibleName = "";
-            this.userControl11.Location = new System.Drawing.Point(-12, -14);
+            this.userControl11.Location = new System.Drawing.Point(-12, -3);
             this.userControl11.Name = "userControl11";
             this.userControl11.Size = new System.Drawing.Size(942, 538);
             this.userControl11.TabIndex = 0;
@@ -44,10 +45,17 @@
             // register1
             // 
             this.register1.AccessibleName = "";
-            this.register1.Location = new System.Drawing.Point(-12, -14);
+            this.register1.Location = new System.Drawing.Point(-12, -3);
             this.register1.Name = "register1";
             this.register1.Size = new System.Drawing.Size(942, 538);
             this.register1.TabIndex = 1;
+            // 
+            // home1
+            // 
+            this.home1.Location = new System.Drawing.Point(-12, -3);
+            this.home1.Name = "home1";
+            this.home1.Size = new System.Drawing.Size(942, 538);
+            this.home1.TabIndex = 2;
             // 
             // Form1
             // 
@@ -56,6 +64,7 @@
             this.ClientSize = new System.Drawing.Size(927, 500);
             this.Controls.Add(this.userControl11);
             this.Controls.Add(this.register1);
+            this.Controls.Add(this.home1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -66,6 +75,7 @@
 
         internal Register register1;
         internal UserControl1 userControl11;
+        internal Home home1;
     }
 }
 
