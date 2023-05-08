@@ -40,11 +40,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.usercon = new System.Windows.Forms.LinkLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.conpan = new System.Windows.Forms.Panel();
+            this.settings = new System.Windows.Forms.LinkLabel();
+            this.logout = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.conpan.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -61,7 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.usercon);
             this.panel1.Location = new System.Drawing.Point(166, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 53);
@@ -160,22 +165,60 @@
             this.button3.Text = "TAX\r\nFORMS\r\n";
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // linkLabel1
+            // usercon
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(652, 21);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(103, 16);
-            this.linkLabel1.TabIndex = 0;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Welcome, User!";
+            this.usercon.AutoSize = true;
+            this.usercon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usercon.LinkColor = System.Drawing.Color.White;
+            this.usercon.Location = new System.Drawing.Point(652, 21);
+            this.usercon.Name = "usercon";
+            this.usercon.Size = new System.Drawing.Size(103, 16);
+            this.usercon.TabIndex = 0;
+            this.usercon.TabStop = true;
+            this.usercon.Text = "Welcome, User!";
+            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
+            // 
+            // conpan
+            // 
+            this.conpan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.conpan.Controls.Add(this.logout);
+            this.conpan.Controls.Add(this.settings);
+            this.conpan.Location = new System.Drawing.Point(794, 37);
+            this.conpan.Name = "conpan";
+            this.conpan.Size = new System.Drawing.Size(145, 125);
+            this.conpan.TabIndex = 12;
+            this.conpan.Visible = false;
+            // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings.LinkColor = System.Drawing.Color.Black;
+            this.settings.Location = new System.Drawing.Point(48, 28);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(55, 16);
+            this.settings.TabIndex = 0;
+            this.settings.TabStop = true;
+            this.settings.Text = "Settings";
+            // 
+            // logout
+            // 
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.LinkColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(48, 60);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(48, 16);
+            this.logout.TabIndex = 1;
+            this.logout.TabStop = true;
+            this.logout.Text = "Logout";
+            this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.conpan);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -193,6 +236,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.conpan.ResumeLayout(false);
+            this.conpan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +252,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel usercon;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Panel conpan;
+        private System.Windows.Forms.LinkLabel logout;
+        private System.Windows.Forms.LinkLabel settings;
     }
 }
