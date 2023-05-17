@@ -26,5 +26,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
