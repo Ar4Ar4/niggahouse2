@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
@@ -16,6 +17,9 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+        OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=Database2.mdb");
+        OleDbCommand cmd = new OleDbCommand();
+        OleDbDataAdapter da = new OleDbDataAdapter();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -32,7 +36,9 @@ namespace WindowsFormsApplication1
 
            var regpan = parent1.register1;
            var userpan = parent1.userControl11;
-           regpan.Show();
+            usernbox.Text = "";
+            passwbox.Text = "";
+            regpan.Show();
            userpan.Hide();
           
         }
@@ -46,14 +52,54 @@ namespace WindowsFormsApplication1
         {
             var parent1 = this.Parent as Form1;
 
+            con.Open();
+            string login = "SELECT * FROM tbl_users WHERE username= '" + usernbox.Text + "' and password='" + passwbox.Text + "'";
+            cmd = new OleDbCommand(login, con);
+            OleDbDataReader dr = cmd.ExecuteReader();
+            
 
 
-            var regpan = parent1.register1;
+            if (dr.Read() == true)
+            {
+                usernbox.Text = "";
+                passwbox.Text = "";
+                shopach.Checked = false;
+                var regpan = parent1.register1;
+                var userpan = parent1.userControl11;
+                var homepan = parent1.home1;
+                regpan.Hide();
+                userpan.Hide();
+                homepan.Show();
+                con.Close();    
+            }
+            else {
+                MessageBox.Show("Invalid Username or Password", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                usernbox.Text = "";
+                passwbox.Text = ""; 
+                usernbox.Focus();
+                con.Close();
+
+            }
+
+
+          /*  var regpan = parent1.register1;
             var userpan = parent1.userControl11;
             var homepan = parent1.home1;
             regpan.Hide();
             userpan.Hide();
-            homepan.Show();
+            homepan.Show();*/
+        }
+
+        private void shopach_CheckedChanged(object sender, EventArgs e)
+        {
+            if (shopach.Checked)
+            {
+                passwbox.PasswordChar = '\0';
+            }
+            else
+            {
+                passwbox.PasswordChar = '*';
+            }
         }
     }
 }

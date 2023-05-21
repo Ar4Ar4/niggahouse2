@@ -33,18 +33,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.reppass = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.namebox = new System.Windows.Forms.TextBox();
+            this.passbox = new System.Windows.Forms.TextBox();
+            this.tinbox = new System.Windows.Forms.TextBox();
+            this.userbox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.emailbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.shopach = new System.Windows.Forms.CheckBox();
+            this.clrbtn = new System.Windows.Forms.Button();
+            this.bckbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -83,29 +88,102 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.bckbtn);
+            this.panel1.Controls.Add(this.clrbtn);
+            this.panel1.Controls.Add(this.shopach);
+            this.panel1.Controls.Add(this.reppass);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.namebox);
+            this.panel1.Controls.Add(this.passbox);
+            this.panel1.Controls.Add(this.tinbox);
+            this.panel1.Controls.Add(this.userbox);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.emailbox);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(361, 110);
+            this.panel1.Location = new System.Drawing.Point(372, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(231, 302);
+            this.panel1.Size = new System.Drawing.Size(231, 359);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // reppass
+            // 
+            this.reppass.Location = new System.Drawing.Point(60, 177);
+            this.reppass.Name = "reppass";
+            this.reppass.PasswordChar = '*';
+            this.reppass.Size = new System.Drawing.Size(100, 20);
+            this.reppass.TabIndex = 21;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(65, 161);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Repeat Password";
+            // 
+            // namebox
+            // 
+            this.namebox.Location = new System.Drawing.Point(60, 79);
+            this.namebox.Name = "namebox";
+            this.namebox.Size = new System.Drawing.Size(100, 20);
+            this.namebox.TabIndex = 19;
+            this.namebox.TextChanged += new System.EventHandler(this.namebox_TextChanged);
+            // 
+            // passbox
+            // 
+            this.passbox.Location = new System.Drawing.Point(60, 118);
+            this.passbox.Name = "passbox";
+            this.passbox.PasswordChar = '*';
+            this.passbox.Size = new System.Drawing.Size(100, 20);
+            this.passbox.TabIndex = 18;
+            this.passbox.TextChanged += new System.EventHandler(this.passbox_TextChanged);
+            // 
+            // tinbox
+            // 
+            this.tinbox.Location = new System.Drawing.Point(60, 215);
+            this.tinbox.Name = "tinbox";
+            this.tinbox.Size = new System.Drawing.Size(100, 20);
+            this.tinbox.TabIndex = 17;
+            this.tinbox.TextChanged += new System.EventHandler(this.tinbox_TextChanged);
+            // 
+            // userbox
+            // 
+            this.userbox.Location = new System.Drawing.Point(60, 254);
+            this.userbox.Name = "userbox";
+            this.userbox.Size = new System.Drawing.Size(100, 20);
+            this.userbox.TabIndex = 16;
+            this.userbox.TextChanged += new System.EventHandler(this.userbox_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(73, 280);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 13);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Email Address";
+            // 
+            // emailbox
+            // 
+            this.emailbox.Location = new System.Drawing.Point(60, 296);
+            this.emailbox.Name = "emailbox";
+            this.emailbox.Size = new System.Drawing.Size(100, 20);
+            this.emailbox.TabIndex = 14;
+            this.emailbox.TextChanged += new System.EventHandler(this.emailbox_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(82, 181);
+            this.label7.Location = new System.Drawing.Point(82, 238);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 13;
@@ -115,7 +193,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(81, 141);
+            this.label6.Location = new System.Drawing.Point(81, 198);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 12;
@@ -144,45 +222,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(72, 265);
+            this.button1.Location = new System.Drawing.Point(125, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 9;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(60, 197);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(60, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(60, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(60, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -194,21 +240,36 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Registration";
             // 
-            // textBox5
+            // shopach
             // 
-            this.textBox5.Location = new System.Drawing.Point(60, 239);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 14;
+            this.shopach.AutoSize = true;
+            this.shopach.Location = new System.Drawing.Point(60, 141);
+            this.shopach.Name = "shopach";
+            this.shopach.Size = new System.Drawing.Size(101, 17);
+            this.shopach.TabIndex = 22;
+            this.shopach.Text = "Show password";
+            this.shopach.UseVisualStyleBackColor = true;
+            this.shopach.CheckedChanged += new System.EventHandler(this.shopach_CheckedChanged);
             // 
-            // label8
+            // clrbtn
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(73, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Email Address";
+            this.clrbtn.Location = new System.Drawing.Point(22, 322);
+            this.clrbtn.Name = "clrbtn";
+            this.clrbtn.Size = new System.Drawing.Size(75, 23);
+            this.clrbtn.TabIndex = 23;
+            this.clrbtn.Text = "Clear";
+            this.clrbtn.UseVisualStyleBackColor = true;
+            this.clrbtn.Click += new System.EventHandler(this.clrbtn_Click);
+            // 
+            // bckbtn
+            // 
+            this.bckbtn.Location = new System.Drawing.Point(12, 3);
+            this.bckbtn.Name = "bckbtn";
+            this.bckbtn.Size = new System.Drawing.Size(23, 25);
+            this.bckbtn.TabIndex = 24;
+            this.bckbtn.Text = "<";
+            this.bckbtn.UseVisualStyleBackColor = true;
+            this.bckbtn.Click += new System.EventHandler(this.bckbtn_Click);
             // 
             // Register
             // 
@@ -236,12 +297,17 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox emailbox;
+        private System.Windows.Forms.TextBox userbox;
+        private System.Windows.Forms.TextBox tinbox;
+        private System.Windows.Forms.TextBox passbox;
+        private System.Windows.Forms.TextBox namebox;
+        private System.Windows.Forms.TextBox reppass;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox shopach;
+        private System.Windows.Forms.Button clrbtn;
+        private System.Windows.Forms.Button bckbtn;
     }
 }

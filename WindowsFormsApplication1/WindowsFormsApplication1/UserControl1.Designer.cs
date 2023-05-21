@@ -37,11 +37,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ForPasLnk = new System.Windows.Forms.LinkLabel();
             this.LogSubBtn = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwbox = new System.Windows.Forms.TextBox();
+            this.usernbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.shopach = new System.Windows.Forms.CheckBox();
             label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -70,14 +71,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel1.Controls.Add(this.shopach);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(label5);
             this.panel1.Controls.Add(this.linkLabel2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.ForPasLnk);
             this.panel1.Controls.Add(this.LogSubBtn);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.passwbox);
+            this.panel1.Controls.Add(this.usernbox);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
@@ -98,7 +100,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(140, 226);
+            this.linkLabel2.Location = new System.Drawing.Point(140, 255);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(81, 13);
             this.linkLabel2.TabIndex = 8;
@@ -109,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(35, 226);
+            this.label4.Location = new System.Drawing.Point(35, 255);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 7;
@@ -118,7 +120,7 @@
             // ForPasLnk
             // 
             this.ForPasLnk.AutoSize = true;
-            this.ForPasLnk.Location = new System.Drawing.Point(79, 193);
+            this.ForPasLnk.Location = new System.Drawing.Point(79, 222);
             this.ForPasLnk.Name = "ForPasLnk";
             this.ForPasLnk.Size = new System.Drawing.Size(86, 13);
             this.ForPasLnk.TabIndex = 6;
@@ -127,7 +129,7 @@
             // 
             // LogSubBtn
             // 
-            this.LogSubBtn.Location = new System.Drawing.Point(82, 167);
+            this.LogSubBtn.Location = new System.Drawing.Point(82, 196);
             this.LogSubBtn.Name = "LogSubBtn";
             this.LogSubBtn.Size = new System.Drawing.Size(75, 23);
             this.LogSubBtn.TabIndex = 5;
@@ -135,20 +137,20 @@
             this.LogSubBtn.UseVisualStyleBackColor = true;
             this.LogSubBtn.Click += new System.EventHandler(this.LogSubBtn_Click);
             // 
-            // textBox2
+            // passwbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 141);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.passwbox.Location = new System.Drawing.Point(65, 141);
+            this.passwbox.Name = "passwbox";
+            this.passwbox.PasswordChar = '*';
+            this.passwbox.Size = new System.Drawing.Size(100, 20);
+            this.passwbox.TabIndex = 4;
             // 
-            // textBox1
+            // usernbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.usernbox.Location = new System.Drawing.Point(65, 101);
+            this.usernbox.Name = "usernbox";
+            this.usernbox.Size = new System.Drawing.Size(100, 20);
+            this.usernbox.TabIndex = 3;
             // 
             // label3
             // 
@@ -181,6 +183,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "TAX";
             // 
+            // shopach
+            // 
+            this.shopach.AutoSize = true;
+            this.shopach.Location = new System.Drawing.Point(65, 167);
+            this.shopach.Name = "shopach";
+            this.shopach.Size = new System.Drawing.Size(101, 17);
+            this.shopach.TabIndex = 23;
+            this.shopach.Text = "Show password";
+            this.shopach.UseVisualStyleBackColor = true;
+            this.shopach.CheckedChanged += new System.EventHandler(this.shopach_CheckedChanged);
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,10 +218,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel ForPasLnk;
         private System.Windows.Forms.Button LogSubBtn;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox passwbox;
+        private System.Windows.Forms.TextBox usernbox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox shopach;
     }
 }
