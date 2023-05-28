@@ -82,6 +82,12 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="withheldCalc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="withheldCalc.Designer.cs">
+      <DependentUpon>withheldCalc.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Calculator.resx">
       <DependentUpon>Calculator.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="withheldCalc.resx">
+      <DependentUpon>withheldCalc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

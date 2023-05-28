@@ -64,17 +64,17 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.MayTax = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.JanTax = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.FebTax = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.MarTax = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.IncTax = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.MarTax = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.FebTax = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.JanTax = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,9 +88,9 @@
             this.panel12.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -463,99 +463,6 @@
             this.label13.TabIndex = 8;
             this.label13.Text = "May\r\nWitholding\r\n ";
             // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.JanTax);
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(166, 73);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(119, 100);
-            this.panel4.TabIndex = 0;
-            // 
-            // JanTax
-            // 
-            this.JanTax.AutoSize = true;
-            this.JanTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.JanTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.JanTax.Location = new System.Drawing.Point(44, 39);
-            this.JanTax.Name = "JanTax";
-            this.JanTax.Size = new System.Drawing.Size(19, 15);
-            this.JanTax.TabIndex = 1;
-            this.JanTax.Text = "---";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 39);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "January \r\nWitholding\r\n ";
-            // 
-            // panel5
-            // 
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.FebTax);
-            this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(284, 73);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(119, 100);
-            this.panel5.TabIndex = 1;
-            // 
-            // FebTax
-            // 
-            this.FebTax.AutoSize = true;
-            this.FebTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FebTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.FebTax.Location = new System.Drawing.Point(43, 39);
-            this.FebTax.Name = "FebTax";
-            this.FebTax.Size = new System.Drawing.Size(19, 15);
-            this.FebTax.TabIndex = 3;
-            this.FebTax.Text = "---";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 39);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Febuary \r\nWitholding\r\n ";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.MarTax);
-            this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(398, 73);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(119, 100);
-            this.panel7.TabIndex = 1;
-            // 
-            // MarTax
-            // 
-            this.MarTax.AutoSize = true;
-            this.MarTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MarTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MarTax.Location = new System.Drawing.Point(44, 39);
-            this.MarTax.Name = "MarTax";
-            this.MarTax.Size = new System.Drawing.Size(19, 15);
-            this.MarTax.TabIndex = 5;
-            this.MarTax.Text = "---";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(27, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 39);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "March\r\nWitholding\r\n ";
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -578,6 +485,99 @@
             this.IncTax.Size = new System.Drawing.Size(27, 20);
             this.IncTax.TabIndex = 8;
             this.IncTax.Text = "---";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(27, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 39);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "March\r\nWitholding\r\n ";
+            // 
+            // MarTax
+            // 
+            this.MarTax.AutoSize = true;
+            this.MarTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MarTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MarTax.Location = new System.Drawing.Point(44, 39);
+            this.MarTax.Name = "MarTax";
+            this.MarTax.Size = new System.Drawing.Size(19, 15);
+            this.MarTax.TabIndex = 5;
+            this.MarTax.Text = "---";
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.MarTax);
+            this.panel7.Controls.Add(this.label9);
+            this.panel7.Location = new System.Drawing.Point(398, 73);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(119, 100);
+            this.panel7.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(26, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 39);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Febuary \r\nWitholding\r\n ";
+            // 
+            // FebTax
+            // 
+            this.FebTax.AutoSize = true;
+            this.FebTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FebTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.FebTax.Location = new System.Drawing.Point(43, 39);
+            this.FebTax.Name = "FebTax";
+            this.FebTax.Size = new System.Drawing.Size(19, 15);
+            this.FebTax.TabIndex = 3;
+            this.FebTax.Text = "---";
+            // 
+            // panel5
+            // 
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.FebTax);
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(284, 73);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(119, 100);
+            this.panel5.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 39);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "January \r\nWitholding\r\n ";
+            // 
+            // JanTax
+            // 
+            this.JanTax.AutoSize = true;
+            this.JanTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.JanTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.JanTax.Location = new System.Drawing.Point(44, 39);
+            this.JanTax.Name = "JanTax";
+            this.JanTax.Size = new System.Drawing.Size(19, 15);
+            this.JanTax.TabIndex = 1;
+            this.JanTax.Text = "---";
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.JanTax);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(166, 73);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(119, 100);
+            this.panel4.TabIndex = 0;
             // 
             // Planner
             // 
@@ -618,12 +618,12 @@
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,16 +665,16 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label MayTax;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label JanTax;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label FebTax;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label MarTax;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label IncTax;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label MarTax;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label FebTax;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label JanTax;
+        private System.Windows.Forms.Panel panel4;
     }
 }
