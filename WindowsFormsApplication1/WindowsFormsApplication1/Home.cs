@@ -44,5 +44,35 @@ namespace WindowsFormsApplication1
             homepan.Hide();
             conpan.Hide();
         }
+
+        private void TaxCalBtn_Click(object sender, EventArgs e)
+        {
+            var parent1 = this.Parent as Form1;
+
+
+
+            var regpan = parent1.register1;
+            var userpan = parent1.userControl11;
+            var homepan = parent1.home1;
+            var inctax = parent1.calculator1;
+            inctax.Show();
+            homepan.Hide();
+
+        }
+
+        private void planBtn_Click(object sender, EventArgs e)
+        {
+            var parent1 = this.Parent as Form1;
+
+
+
+            var regpan = parent1.register1;
+            var userpan = parent1.userControl11;
+            var homepan = parent1.home1;
+            var inctax = parent1.calculator1;
+            var planpan = parent1.planner1;
+            planpan.Show();
+            this.Hide();
+        }
     }
 }

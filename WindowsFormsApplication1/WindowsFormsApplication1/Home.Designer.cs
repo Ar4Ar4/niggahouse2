@@ -31,20 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.usercon = new System.Windows.Forms.LinkLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.usercon = new System.Windows.Forms.LinkLabel();
+            this.planBtn = new System.Windows.Forms.Button();
+            this.TaxCalBtn = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.conpan = new System.Windows.Forms.Panel();
-            this.settings = new System.Windows.Forms.LinkLabel();
             this.logout = new System.Windows.Forms.LinkLabel();
+            this.settings = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +70,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 53);
             this.panel1.TabIndex = 1;
+            // 
+            // usercon
+            // 
+            this.usercon.AutoSize = true;
+            this.usercon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usercon.LinkColor = System.Drawing.Color.White;
+            this.usercon.Location = new System.Drawing.Point(652, 21);
+            this.usercon.Name = "usercon";
+            this.usercon.Size = new System.Drawing.Size(103, 16);
+            this.usercon.TabIndex = 0;
+            this.usercon.TabStop = true;
+            this.usercon.Text = "Welcome, User!";
+            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
             // 
             // panel2
             // 
@@ -135,48 +147,27 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
-            // button1
+            // planBtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(616, 163);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 37);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "TAX PLANNER";
-            this.button1.UseVisualStyleBackColor = false;
+            this.planBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.planBtn.Location = new System.Drawing.Point(616, 187);
+            this.planBtn.Name = "planBtn";
+            this.planBtn.Size = new System.Drawing.Size(115, 37);
+            this.planBtn.TabIndex = 9;
+            this.planBtn.Text = "TAX PLANNER";
+            this.planBtn.UseVisualStyleBackColor = false;
+            this.planBtn.Click += new System.EventHandler(this.planBtn_Click);
             // 
-            // button2
+            // TaxCalBtn
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(616, 221);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "TAX\r\nCALCULATION";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(616, 276);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(115, 37);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "TAX\r\nFORMS\r\n";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // usercon
-            // 
-            this.usercon.AutoSize = true;
-            this.usercon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usercon.LinkColor = System.Drawing.Color.White;
-            this.usercon.Location = new System.Drawing.Point(652, 21);
-            this.usercon.Name = "usercon";
-            this.usercon.Size = new System.Drawing.Size(103, 16);
-            this.usercon.TabIndex = 0;
-            this.usercon.TabStop = true;
-            this.usercon.Text = "Welcome, User!";
-            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
+            this.TaxCalBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TaxCalBtn.Location = new System.Drawing.Point(616, 255);
+            this.TaxCalBtn.Name = "TaxCalBtn";
+            this.TaxCalBtn.Size = new System.Drawing.Size(115, 37);
+            this.TaxCalBtn.TabIndex = 10;
+            this.TaxCalBtn.Text = "TAX\r\nCALCULATION";
+            this.TaxCalBtn.UseVisualStyleBackColor = false;
+            this.TaxCalBtn.Click += new System.EventHandler(this.TaxCalBtn_Click);
             // 
             // conpan
             // 
@@ -188,18 +179,6 @@
             this.conpan.Size = new System.Drawing.Size(145, 125);
             this.conpan.TabIndex = 12;
             this.conpan.Visible = false;
-            // 
-            // settings
-            // 
-            this.settings.AutoSize = true;
-            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settings.LinkColor = System.Drawing.Color.Black;
-            this.settings.Location = new System.Drawing.Point(48, 28);
-            this.settings.Name = "settings";
-            this.settings.Size = new System.Drawing.Size(55, 16);
-            this.settings.TabIndex = 0;
-            this.settings.TabStop = true;
-            this.settings.Text = "Settings";
             // 
             // logout
             // 
@@ -214,14 +193,25 @@
             this.logout.Text = "Logout";
             this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
             // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings.LinkColor = System.Drawing.Color.Black;
+            this.settings.Location = new System.Drawing.Point(48, 28);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(55, 16);
+            this.settings.TabIndex = 0;
+            this.settings.TabStop = true;
+            this.settings.Text = "Settings";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.conpan);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TaxCalBtn);
+            this.Controls.Add(this.planBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -254,9 +244,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel usercon;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button planBtn;
+        private System.Windows.Forms.Button TaxCalBtn;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel conpan;
         private System.Windows.Forms.LinkLabel logout;

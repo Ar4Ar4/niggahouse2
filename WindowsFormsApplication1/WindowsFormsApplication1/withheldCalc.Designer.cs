@@ -62,6 +62,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.BackBtn = new System.Windows.Forms.Button();
             this.NextBtn = new System.Windows.Forms.Button();
+            this.conpan = new System.Windows.Forms.Panel();
+            this.logout = new System.Windows.Forms.LinkLabel();
+            this.settings = new System.Windows.Forms.LinkLabel();
+            this.TaxPan = new System.Windows.Forms.Panel();
+            this.Withlib = new System.Windows.Forms.LinkLabel();
+            this.IncLib = new System.Windows.Forms.LinkLabel();
+            this.Vbtn = new System.Windows.Forms.Button();
+            this.monthBox = new System.Windows.Forms.ComboBox();
+            this.semiCheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,6 +78,8 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.conpan.SuspendLayout();
+            this.TaxPan.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -83,6 +94,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Vbtn);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -143,11 +155,14 @@
             this.usercon.TabIndex = 0;
             this.usercon.TabStop = true;
             this.usercon.Text = "Welcome, User!";
+            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.semiCheck);
+            this.panel3.Controls.Add(this.monthBox);
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Location = new System.Drawing.Point(254, 137);
             this.panel3.Name = "panel3";
@@ -156,7 +171,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 30);
+            this.textBox1.Location = new System.Drawing.Point(12, 9);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(176, 20);
             this.textBox1.TabIndex = 4;
@@ -402,6 +417,7 @@
             this.BackBtn.TabIndex = 17;
             this.BackBtn.Text = "<Back";
             this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // NextBtn
             // 
@@ -411,11 +427,127 @@
             this.NextBtn.TabIndex = 16;
             this.NextBtn.Text = "Next>";
             this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
+            // 
+            // conpan
+            // 
+            this.conpan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.conpan.Controls.Add(this.logout);
+            this.conpan.Controls.Add(this.settings);
+            this.conpan.Location = new System.Drawing.Point(792, 38);
+            this.conpan.Name = "conpan";
+            this.conpan.Size = new System.Drawing.Size(145, 125);
+            this.conpan.TabIndex = 15;
+            this.conpan.Visible = false;
+            // 
+            // logout
+            // 
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.LinkColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(48, 60);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(48, 16);
+            this.logout.TabIndex = 1;
+            this.logout.TabStop = true;
+            this.logout.Text = "Logout";
+            this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
+            // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings.LinkColor = System.Drawing.Color.Black;
+            this.settings.Location = new System.Drawing.Point(48, 28);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(55, 16);
+            this.settings.TabIndex = 0;
+            this.settings.TabStop = true;
+            this.settings.Text = "Settings";
+            // 
+            // TaxPan
+            // 
+            this.TaxPan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TaxPan.Controls.Add(this.Withlib);
+            this.TaxPan.Controls.Add(this.IncLib);
+            this.TaxPan.Location = new System.Drawing.Point(12, 42);
+            this.TaxPan.Name = "TaxPan";
+            this.TaxPan.Size = new System.Drawing.Size(145, 125);
+            this.TaxPan.TabIndex = 18;
+            this.TaxPan.Visible = false;
+            // 
+            // Withlib
+            // 
+            this.Withlib.AutoSize = true;
+            this.Withlib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Withlib.LinkColor = System.Drawing.Color.Black;
+            this.Withlib.Location = new System.Drawing.Point(19, 74);
+            this.Withlib.Name = "Withlib";
+            this.Withlib.Size = new System.Drawing.Size(118, 16);
+            this.Withlib.TabIndex = 1;
+            this.Withlib.TabStop = true;
+            this.Withlib.Text = "Withholding Tax";
+            // 
+            // IncLib
+            // 
+            this.IncLib.AutoSize = true;
+            this.IncLib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncLib.LinkColor = System.Drawing.Color.Black;
+            this.IncLib.Location = new System.Drawing.Point(21, 25);
+            this.IncLib.Name = "IncLib";
+            this.IncLib.Size = new System.Drawing.Size(77, 16);
+            this.IncLib.TabIndex = 0;
+            this.IncLib.TabStop = true;
+            this.IncLib.Text = "Income Tax";
+            this.IncLib.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.IncLib_LinkClicked);
+            // 
+            // Vbtn
+            // 
+            this.Vbtn.Location = new System.Drawing.Point(128, 19);
+            this.Vbtn.Name = "Vbtn";
+            this.Vbtn.Size = new System.Drawing.Size(21, 20);
+            this.Vbtn.TabIndex = 17;
+            this.Vbtn.Text = "V";
+            this.Vbtn.UseVisualStyleBackColor = true;
+            this.Vbtn.Click += new System.EventHandler(this.Vbtn_Click);
+            // 
+            // monthBox
+            // 
+            this.monthBox.FormattingEnabled = true;
+            this.monthBox.Items.AddRange(new object[] {
+            "January",
+            "Febuary",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.monthBox.Location = new System.Drawing.Point(12, 36);
+            this.monthBox.Name = "monthBox";
+            this.monthBox.Size = new System.Drawing.Size(121, 21);
+            this.monthBox.TabIndex = 19;
+            // 
+            // semiCheck
+            // 
+            this.semiCheck.AutoSize = true;
+            this.semiCheck.Location = new System.Drawing.Point(12, 63);
+            this.semiCheck.Name = "semiCheck";
+            this.semiCheck.Size = new System.Drawing.Size(89, 17);
+            this.semiCheck.TabIndex = 20;
+            this.semiCheck.Text = "Semi-Monthly\r\n";
+            this.semiCheck.UseVisualStyleBackColor = true;
             // 
             // withheldCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.TaxPan);
+            this.Controls.Add(this.conpan);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.NextBtn);
             this.Controls.Add(this.panel6);
@@ -443,6 +575,10 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.conpan.ResumeLayout(false);
+            this.conpan.PerformLayout();
+            this.TaxPan.ResumeLayout(false);
+            this.TaxPan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,5 +619,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Button NextBtn;
+        private System.Windows.Forms.Panel conpan;
+        private System.Windows.Forms.LinkLabel logout;
+        private System.Windows.Forms.LinkLabel settings;
+        private System.Windows.Forms.Panel TaxPan;
+        private System.Windows.Forms.LinkLabel Withlib;
+        private System.Windows.Forms.LinkLabel IncLib;
+        private System.Windows.Forms.Button Vbtn;
+        private System.Windows.Forms.CheckBox semiCheck;
+        private System.Windows.Forms.ComboBox monthBox;
     }
 }

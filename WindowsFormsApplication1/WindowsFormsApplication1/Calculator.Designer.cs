@@ -62,6 +62,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.NextBtn = new System.Windows.Forms.Button();
             this.BackBtn = new System.Windows.Forms.Button();
+            this.conpan = new System.Windows.Forms.Panel();
+            this.logout = new System.Windows.Forms.LinkLabel();
+            this.settings = new System.Windows.Forms.LinkLabel();
+            this.TaxPan = new System.Windows.Forms.Panel();
+            this.Withlib = new System.Windows.Forms.LinkLabel();
+            this.IncLib = new System.Windows.Forms.LinkLabel();
+            this.Vbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,6 +76,8 @@
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.conpan.SuspendLayout();
+            this.TaxPan.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -86,7 +95,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.usercon);
-            this.panel1.Location = new System.Drawing.Point(166, 3);
+            this.panel1.Location = new System.Drawing.Point(166, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(773, 53);
             this.panel1.TabIndex = 2;
@@ -113,12 +122,14 @@
             this.usercon.TabIndex = 0;
             this.usercon.TabStop = true;
             this.usercon.Text = "Welcome, User!";
+            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.Vbtn);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(168, 53);
             this.panel2.TabIndex = 3;
@@ -414,11 +425,96 @@
             this.BackBtn.TabIndex = 13;
             this.BackBtn.Text = "<Back";
             this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
+            // conpan
+            // 
+            this.conpan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.conpan.Controls.Add(this.logout);
+            this.conpan.Controls.Add(this.settings);
+            this.conpan.Location = new System.Drawing.Point(794, 38);
+            this.conpan.Name = "conpan";
+            this.conpan.Size = new System.Drawing.Size(145, 125);
+            this.conpan.TabIndex = 14;
+            this.conpan.Visible = false;
+            // 
+            // logout
+            // 
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.LinkColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(48, 60);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(48, 16);
+            this.logout.TabIndex = 1;
+            this.logout.TabStop = true;
+            this.logout.Text = "Logout";
+            this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
+            // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings.LinkColor = System.Drawing.Color.Black;
+            this.settings.Location = new System.Drawing.Point(48, 28);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(55, 16);
+            this.settings.TabIndex = 0;
+            this.settings.TabStop = true;
+            this.settings.Text = "Settings";
+            // 
+            // TaxPan
+            // 
+            this.TaxPan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.TaxPan.Controls.Add(this.Withlib);
+            this.TaxPan.Controls.Add(this.IncLib);
+            this.TaxPan.Location = new System.Drawing.Point(23, 41);
+            this.TaxPan.Name = "TaxPan";
+            this.TaxPan.Size = new System.Drawing.Size(145, 125);
+            this.TaxPan.TabIndex = 15;
+            this.TaxPan.Visible = false;
+            // 
+            // Withlib
+            // 
+            this.Withlib.AutoSize = true;
+            this.Withlib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Withlib.LinkColor = System.Drawing.Color.Black;
+            this.Withlib.Location = new System.Drawing.Point(21, 74);
+            this.Withlib.Name = "Withlib";
+            this.Withlib.Size = new System.Drawing.Size(103, 16);
+            this.Withlib.TabIndex = 1;
+            this.Withlib.TabStop = true;
+            this.Withlib.Text = "Withholding Tax";
+            this.Withlib.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Withlib_LinkClicked);
+            // 
+            // IncLib
+            // 
+            this.IncLib.AutoSize = true;
+            this.IncLib.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncLib.LinkColor = System.Drawing.Color.Black;
+            this.IncLib.Location = new System.Drawing.Point(21, 25);
+            this.IncLib.Name = "IncLib";
+            this.IncLib.Size = new System.Drawing.Size(87, 16);
+            this.IncLib.TabIndex = 0;
+            this.IncLib.TabStop = true;
+            this.IncLib.Text = "Income Tax";
+            // 
+            // Vbtn
+            // 
+            this.Vbtn.Location = new System.Drawing.Point(128, 19);
+            this.Vbtn.Name = "Vbtn";
+            this.Vbtn.Size = new System.Drawing.Size(21, 20);
+            this.Vbtn.TabIndex = 16;
+            this.Vbtn.Text = "V";
+            this.Vbtn.UseVisualStyleBackColor = true;
+            this.Vbtn.Click += new System.EventHandler(this.Vbtn_Click);
             // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.TaxPan);
+            this.Controls.Add(this.conpan);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.NextBtn);
             this.Controls.Add(this.panel6);
@@ -446,6 +542,10 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.conpan.ResumeLayout(false);
+            this.conpan.PerformLayout();
+            this.TaxPan.ResumeLayout(false);
+            this.TaxPan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,5 +586,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button NextBtn;
         private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Panel conpan;
+        private System.Windows.Forms.LinkLabel logout;
+        private System.Windows.Forms.LinkLabel settings;
+        private System.Windows.Forms.Button Vbtn;
+        private System.Windows.Forms.Panel TaxPan;
+        private System.Windows.Forms.LinkLabel Withlib;
+        private System.Windows.Forms.LinkLabel IncLib;
     }
 }

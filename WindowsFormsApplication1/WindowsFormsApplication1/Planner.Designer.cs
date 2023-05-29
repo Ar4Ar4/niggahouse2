@@ -75,6 +75,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.JanTax = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.BackBtn = new System.Windows.Forms.Button();
+            this.conpan = new System.Windows.Forms.Panel();
+            this.logout = new System.Windows.Forms.LinkLabel();
+            this.settings = new System.Windows.Forms.LinkLabel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +95,7 @@
             this.panel7.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.conpan.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -155,6 +160,7 @@
             this.usercon.TabIndex = 0;
             this.usercon.TabStop = true;
             this.usercon.Text = "Welcome, User!";
+            this.usercon.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.usercon_LinkClicked);
             // 
             // pictureBox1
             // 
@@ -579,10 +585,58 @@
             this.panel4.Size = new System.Drawing.Size(119, 100);
             this.panel4.TabIndex = 0;
             // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(47, 473);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 23);
+            this.BackBtn.TabIndex = 14;
+            this.BackBtn.Text = "<Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
+            // 
+            // conpan
+            // 
+            this.conpan.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.conpan.Controls.Add(this.logout);
+            this.conpan.Controls.Add(this.settings);
+            this.conpan.Location = new System.Drawing.Point(794, 40);
+            this.conpan.Name = "conpan";
+            this.conpan.Size = new System.Drawing.Size(145, 125);
+            this.conpan.TabIndex = 16;
+            this.conpan.Visible = false;
+            // 
+            // logout
+            // 
+            this.logout.AutoSize = true;
+            this.logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout.LinkColor = System.Drawing.Color.Black;
+            this.logout.Location = new System.Drawing.Point(48, 60);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(48, 16);
+            this.logout.TabIndex = 1;
+            this.logout.TabStop = true;
+            this.logout.Text = "Logout";
+            this.logout.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.logout_LinkClicked);
+            // 
+            // settings
+            // 
+            this.settings.AutoSize = true;
+            this.settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settings.LinkColor = System.Drawing.Color.Black;
+            this.settings.Location = new System.Drawing.Point(48, 28);
+            this.settings.Name = "settings";
+            this.settings.Size = new System.Drawing.Size(55, 16);
+            this.settings.TabIndex = 0;
+            this.settings.TabStop = true;
+            this.settings.Text = "Settings";
+            // 
             // Planner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.conpan);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.IncTax);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.panel7);
@@ -624,6 +678,8 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.conpan.ResumeLayout(false);
+            this.conpan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -676,5 +732,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label JanTax;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button BackBtn;
+        private System.Windows.Forms.Panel conpan;
+        private System.Windows.Forms.LinkLabel logout;
+        private System.Windows.Forms.LinkLabel settings;
     }
 }
