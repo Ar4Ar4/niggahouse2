@@ -58,8 +58,8 @@ namespace WindowsFormsApplication1
             con.Open();
             string login = "SELECT * FROM tbl_users WHERE username= '" + usernbox.Text + "' and password='" + passwbox.Text + "'";
             cmd = new OleDbCommand(login, con);
-            cmd.Parameters.AddWithValue("@Username", usernbox.Text);
-            cmd.Parameters.AddWithValue("@Password", passwbox.Text);
+           // cmd.Parameters.AddWithValue("@Username", usernbox.Text);
+            //cmd.Parameters.AddWithValue("@Password", passwbox.Text);
 
             OleDbDataReader dr = cmd.ExecuteReader();
             
