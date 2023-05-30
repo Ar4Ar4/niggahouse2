@@ -123,10 +123,26 @@ namespace WindowsFormsApplication1
             
             double meep = Convert.ToDouble(inctxtbox.Text);
             double oggy = TaxTab(meep);
+            //-------------
+            double br1 = socialservices(oggy);
+            double br2 = economic(oggy);
+            double br3 = debt(oggy);
+            double br4 = defense(oggy);
+            double br5 = genpub(oggy);
+            double br6 = others(oggy);    
+            //--------------
 
             TaxLab.Text = oggy.ToString("C", new CultureInfo("en-PH"));
             solLab.Text = ttSol(meep);
             TaxPer.Text = perdisp(meep);
+            //-------------
+            SocSerLab.Text = br1.ToString("C", new CultureInfo("en-PH"));
+            EcoSerLab.Text = br2.ToString("C", new CultureInfo("en-PH"));
+            DebSerLab.Text = br3.ToString("C", new CultureInfo("en-PH"));
+            DefLab.Text = br4.ToString("C", new CultureInfo("en-PH"));
+            GenLab.Text = br5.ToString("C", new CultureInfo("en-PH"));
+            OLab.Text = br6.ToString("C", new CultureInfo("en-PH"));
+            //--------------
             parent1.wensis(TaxLab.Text);
 
         }
@@ -218,9 +234,40 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static void taxbreaker(double coomzone) { 
+        public static double socialservices(double weem) {
 
-        
+            return weem * 0.36;
+
+        }
+        public static double economic(double weem)
+        {
+
+            return weem * 0.27;
+
+        }
+        public static double debt(double weem)
+        {
+
+            return weem * 0.21;
+
+        }
+        public static double defense(double weem)
+        {
+
+            return weem * 0.07;
+
+        }
+        public static double genpub(double weem)
+        {
+
+            return weem * 0.06;
+
+        }
+        public static double others(double weem)
+        {
+
+            return weem * 0.03;
+
         }
     }
 }

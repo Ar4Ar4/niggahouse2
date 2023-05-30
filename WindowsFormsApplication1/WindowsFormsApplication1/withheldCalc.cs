@@ -118,14 +118,44 @@ namespace WindowsFormsApplication1
             wTaxLab.Text = oggy.ToString("C", new CultureInfo("en-PH"));
             if (semiCheck.Checked==true)
             {
+                double br1 = socialservices(oggy2);
+                double br2 = economic(oggy2);
+                double br3 = debt(oggy2);
+                double br4 = defense(oggy2);
+                double br5 = genpub(oggy2);
+                double br6 = others(oggy2);
+                //--------------------------------
+                SocSerLab.Text = br1.ToString("C", new CultureInfo("en-PH"));
+                EcoSerLab.Text = br2.ToString("C", new CultureInfo("en-PH"));
+                DebSerLab.Text = br3.ToString("C", new CultureInfo("en-PH"));
+                DefLab.Text = br4.ToString("C", new CultureInfo("en-PH"));
+                GenLab.Text = br5.ToString("C", new CultureInfo("en-PH"));
+                OLab.Text = br6.ToString("C", new CultureInfo("en-PH"));
+                //---------------------------------------------------------
                 wTaxLab.Text = oggy2.ToString("C", new CultureInfo("en-PH"));
                 solLab.Text = semoo(meep);
+                wTaxPer.Text= semoo2(meep);
                 parent1.wensis2(wTaxLab.Text, monthBox.Text);
             }
             else
             {
+                double br1 = socialservices(oggy);
+                double br2 = economic(oggy);
+                double br3 = debt(oggy);
+                double br4 = defense(oggy);
+                double br5 = genpub(oggy);
+                double br6 = others(oggy);
+                //--------------------------------
+                SocSerLab.Text = br1.ToString("C", new CultureInfo("en-PH"));
+                EcoSerLab.Text = br2.ToString("C", new CultureInfo("en-PH"));
+                DebSerLab.Text = br3.ToString("C", new CultureInfo("en-PH"));
+                DefLab.Text = br4.ToString("C", new CultureInfo("en-PH"));
+                GenLab.Text = br5.ToString("C", new CultureInfo("en-PH"));
+                OLab.Text = br6.ToString("C", new CultureInfo("en-PH"));
+                //---------------------------------------------------------
                 wTaxLab.Text = oggy.ToString("C", new CultureInfo("en-PH"));
                 solLab.Text = mowon(meep);
+                wTaxPer.Text = mowon2(meep);
                 parent1.wensis2(wTaxLab.Text, monthBox.Text);
             }
         }
@@ -192,6 +222,7 @@ namespace WindowsFormsApplication1
             return withholdingTax;
 
         }
+        //----------------------------------------------------------------------------
         public static string mowon(double moninc)
         {
             string withholdingTax;
@@ -223,6 +254,38 @@ namespace WindowsFormsApplication1
             return withholdingTax;
 
         }
+        public static string mowon2(double moninc)
+        {
+           
+
+            if (moninc <= 20833)
+            {
+                return "---";
+            }
+            else if (moninc <= 33332)
+            {
+                return "15%";
+            }
+            else if (moninc <= 66666)
+            {
+                return "20%";
+            }
+            else if (moninc <= 166666)
+            {
+                return "25%";
+            }
+            else if (moninc <= 666666)
+            {
+                return "30%";
+            }
+            else
+            {
+                return "35%";
+            }
+           
+
+        }
+        //-----------------------------------------------------------------------
         public static string semoo(double moninc)
         {
             string withholdingTax;
@@ -255,8 +318,80 @@ namespace WindowsFormsApplication1
             return withholdingTax;
 
         }
+        public static string semoo2(double moninc)
+        {
+           
+
+            if (moninc <= 10416.50)
+            {
+                return "---";
+            }
+            else if (moninc <= 16666)
+            {
+                return "15%";
+            }
+            else if (moninc <= 33333)
+            {
+                return "20%";
+            }
+            else if (moninc <= 83333)
+            {
+                return "25%";
+            }
+            else if (moninc <= 333333)
+            {
+                return "30%";
+            }
+            else
+            {
+                return "35%";
+            }
+
+        }
+        //------------------------------------
+        public static double socialservices(double weem)
+        {
+
+            return weem * 0.36;
+
+        }
+        public static double economic(double weem)
+        {
+
+            return weem * 0.27;
+
+        }
+        public static double debt(double weem)
+        {
+
+            return weem * 0.21;
+
+        }
+        public static double defense(double weem)
+        {
+
+            return weem * 0.07;
+
+        }
+        public static double genpub(double weem)
+        {
+
+            return weem * 0.06;
+
+        }
+        public static double others(double weem)
+        {
+
+            return weem * 0.03;
+
+        }
 
         private void semiCheck_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void wTaxPer_Click(object sender, EventArgs e)
         {
 
         }
