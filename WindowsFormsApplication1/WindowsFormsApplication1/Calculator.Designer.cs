@@ -36,7 +36,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.inctxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -69,6 +69,9 @@
             this.Withlib = new System.Windows.Forms.LinkLabel();
             this.IncLib = new System.Windows.Forms.LinkLabel();
             this.Vbtn = new System.Windows.Forms.Button();
+            this.subtn = new System.Windows.Forms.Button();
+            this.solLab = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -155,12 +158,12 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "TAX";
             // 
-            // textBox1
+            // inctxtbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 4;
+            this.inctxtbox.Location = new System.Drawing.Point(12, 30);
+            this.inctxtbox.Name = "inctxtbox";
+            this.inctxtbox.Size = new System.Drawing.Size(176, 20);
+            this.inctxtbox.TabIndex = 4;
             // 
             // label4
             // 
@@ -188,7 +191,8 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.subtn);
+            this.panel3.Controls.Add(this.inctxtbox);
             this.panel3.Location = new System.Drawing.Point(277, 143);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 83);
@@ -211,7 +215,7 @@
             this.TaxPer.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TaxPer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaxPer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TaxPer.Location = new System.Drawing.Point(84, 30);
+            this.TaxPer.Location = new System.Drawing.Point(65, 30);
             this.TaxPer.Name = "TaxPer";
             this.TaxPer.Size = new System.Drawing.Size(36, 25);
             this.TaxPer.TabIndex = 10;
@@ -233,6 +237,8 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.solLab);
             this.panel5.Controls.Add(this.TaxLab);
             this.panel5.Controls.Add(this.label21);
             this.panel5.Location = new System.Drawing.Point(369, 260);
@@ -246,7 +252,7 @@
             this.TaxLab.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.TaxLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaxLab.ForeColor = System.Drawing.Color.DarkRed;
-            this.TaxLab.Location = new System.Drawing.Point(217, 16);
+            this.TaxLab.Location = new System.Drawing.Point(172, 15);
             this.TaxLab.Name = "TaxLab";
             this.TaxLab.Size = new System.Drawing.Size(36, 25);
             this.TaxLab.TabIndex = 12;
@@ -257,7 +263,7 @@
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(32, 16);
+            this.label21.Location = new System.Drawing.Point(12, 15);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(135, 25);
             this.label21.TabIndex = 11;
@@ -509,6 +515,40 @@
             this.Vbtn.UseVisualStyleBackColor = true;
             this.Vbtn.Click += new System.EventHandler(this.Vbtn_Click);
             // 
+            // subtn
+            // 
+            this.subtn.Location = new System.Drawing.Point(12, 55);
+            this.subtn.Name = "subtn";
+            this.subtn.Size = new System.Drawing.Size(75, 23);
+            this.subtn.TabIndex = 5;
+            this.subtn.Text = "Submit";
+            this.subtn.UseVisualStyleBackColor = true;
+            this.subtn.Click += new System.EventHandler(this.subtn_Click);
+            // 
+            // solLab
+            // 
+            this.solLab.AutoSize = true;
+            this.solLab.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.solLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solLab.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.solLab.Location = new System.Drawing.Point(11, 136);
+            this.solLab.Name = "solLab";
+            this.solLab.Size = new System.Drawing.Size(19, 16);
+            this.solLab.TabIndex = 13;
+            this.solLab.Text = "---";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(12, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 25);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Formula:";
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -560,7 +600,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox inctxtbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
@@ -593,5 +633,8 @@
         private System.Windows.Forms.Panel TaxPan;
         private System.Windows.Forms.LinkLabel Withlib;
         private System.Windows.Forms.LinkLabel IncLib;
+        private System.Windows.Forms.Button subtn;
+        private System.Windows.Forms.Label solLab;
+        private System.Windows.Forms.Label label7;
     }
 }

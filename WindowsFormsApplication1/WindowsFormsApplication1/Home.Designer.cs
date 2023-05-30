@@ -242,7 +242,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.LinkLabel usercon;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button planBtn;
         private System.Windows.Forms.Button TaxCalBtn;
@@ -250,5 +249,6 @@
         private System.Windows.Forms.Panel conpan;
         private System.Windows.Forms.LinkLabel logout;
         private System.Windows.Forms.LinkLabel settings;
+        internal System.Windows.Forms.LinkLabel usercon;
     }
 }

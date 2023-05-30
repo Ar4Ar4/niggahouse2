@@ -15,6 +15,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+           
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -26,5 +27,27 @@ namespace WindowsFormsApplication1
         {
 
         }
+        public void wensis(string calinctax) { 
+            Planner planner = this.planner1;
+            planner.cck(calinctax);
+        }
+        public void wensis2(string calinctax2, string month)
+        {
+            Planner planner = this.planner1;
+            planner.setDataToMonth(calinctax2, month);
+        }
+
+        public void wensis3(string calinctax3)
+        {
+            Home hom = this.home1;
+            Calculator cal = this.calculator1;
+            withheldCalc wcal = this.withheldCalc1;    
+            Planner planner = this.planner1;    
+            hom.cck(calinctax3);
+            cal.cck(calinctax3);
+            wcal.cck(calinctax3);
+            planner.cck2(calinctax3);
+        }
+
     }
 }

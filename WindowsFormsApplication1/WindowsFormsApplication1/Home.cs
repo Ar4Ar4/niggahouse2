@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace WindowsFormsApplication1
 {
@@ -15,7 +16,11 @@ namespace WindowsFormsApplication1
         public Home()
         {
             InitializeComponent();
+            
         }
+      
+
+
 
         private void usercon_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -29,7 +34,10 @@ namespace WindowsFormsApplication1
             }
            
         }
-
+        public void cck(string calinctax)
+        {
+            usercon.Text = "Welcome, "+calinctax;
+        }
         private void logout_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var parent1 = this.Parent as Form1;
@@ -74,5 +82,7 @@ namespace WindowsFormsApplication1
             planpan.Show();
             this.Hide();
         }
+       
+
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WindowsFormsApplication1
 {
@@ -47,26 +48,38 @@ namespace WindowsFormsApplication1
         {
 
         }
+       
 
         private void LogSubBtn_Click(object sender, EventArgs e)
         {
             var parent1 = this.Parent as Form1;
+           // var parent2 = this.Parent as Home;
 
             con.Open();
             string login = "SELECT * FROM tbl_users WHERE username= '" + usernbox.Text + "' and password='" + passwbox.Text + "'";
             cmd = new OleDbCommand(login, con);
+            cmd.Parameters.AddWithValue("@Username", usernbox.Text);
+            cmd.Parameters.AddWithValue("@Password", passwbox.Text);
+
             OleDbDataReader dr = cmd.ExecuteReader();
             
 
 
             if (dr.Read() == true)
             {
+       
                 usernbox.Text = "";
                 passwbox.Text = "";
                 shopach.Checked = false;
+                string username = dr["username"].ToString();
+                //MessageBox.Show(username, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                parent1.wensis3(username);
                 var regpan = parent1.register1;
                 var userpan = parent1.userControl11;
                 var homepan = parent1.home1;
+               // string username = 
+               
+
                 regpan.Hide();
                 userpan.Hide();
                 homepan.Show();

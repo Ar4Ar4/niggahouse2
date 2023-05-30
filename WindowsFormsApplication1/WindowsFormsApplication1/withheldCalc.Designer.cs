@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.usercon = new System.Windows.Forms.LinkLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.withbox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.wTaxPer = new System.Windows.Forms.Label();
@@ -71,6 +71,10 @@
             this.Vbtn = new System.Windows.Forms.Button();
             this.monthBox = new System.Windows.Forms.ComboBox();
             this.semiCheck = new System.Windows.Forms.CheckBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.subtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.solLab = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -161,20 +165,21 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.subtn);
             this.panel3.Controls.Add(this.semiCheck);
             this.panel3.Controls.Add(this.monthBox);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.withbox);
             this.panel3.Location = new System.Drawing.Point(254, 137);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 83);
             this.panel3.TabIndex = 11;
             // 
-            // textBox1
+            // withbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 4;
+            this.withbox.Location = new System.Drawing.Point(12, 9);
+            this.withbox.Name = "withbox";
+            this.withbox.Size = new System.Drawing.Size(176, 20);
+            this.withbox.TabIndex = 4;
             // 
             // label6
             // 
@@ -235,6 +240,8 @@
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.solLab);
             this.panel5.Controls.Add(this.wTaxLab);
             this.panel5.Controls.Add(this.label21);
             this.panel5.Location = new System.Drawing.Point(378, 237);
@@ -248,7 +255,7 @@
             this.wTaxLab.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.wTaxLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.wTaxLab.ForeColor = System.Drawing.Color.DarkRed;
-            this.wTaxLab.Location = new System.Drawing.Point(217, 16);
+            this.wTaxLab.Location = new System.Drawing.Point(173, 16);
             this.wTaxLab.Name = "wTaxLab";
             this.wTaxLab.Size = new System.Drawing.Size(36, 25);
             this.wTaxLab.TabIndex = 12;
@@ -527,7 +534,7 @@
             "October",
             "November",
             "December"});
-            this.monthBox.Location = new System.Drawing.Point(12, 36);
+            this.monthBox.Location = new System.Drawing.Point(12, 30);
             this.monthBox.Name = "monthBox";
             this.monthBox.Size = new System.Drawing.Size(121, 21);
             this.monthBox.TabIndex = 19;
@@ -535,12 +542,47 @@
             // semiCheck
             // 
             this.semiCheck.AutoSize = true;
-            this.semiCheck.Location = new System.Drawing.Point(12, 63);
+            this.semiCheck.Location = new System.Drawing.Point(12, 59);
             this.semiCheck.Name = "semiCheck";
             this.semiCheck.Size = new System.Drawing.Size(89, 17);
             this.semiCheck.TabIndex = 20;
             this.semiCheck.Text = "Semi-Monthly\r\n";
             this.semiCheck.UseVisualStyleBackColor = true;
+            this.semiCheck.CheckedChanged += new System.EventHandler(this.semiCheck_CheckedChanged);
+            // 
+            // subtn
+            // 
+            this.subtn.Location = new System.Drawing.Point(120, 55);
+            this.subtn.Name = "subtn";
+            this.subtn.Size = new System.Drawing.Size(75, 23);
+            this.subtn.TabIndex = 19;
+            this.subtn.Text = "Submit";
+            this.subtn.UseVisualStyleBackColor = true;
+            this.subtn.Click += new System.EventHandler(this.subtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(32, 97);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 25);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Formula:";
+            // 
+            // solLab
+            // 
+            this.solLab.AutoSize = true;
+            this.solLab.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.solLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solLab.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.solLab.Location = new System.Drawing.Point(31, 152);
+            this.solLab.Name = "solLab";
+            this.solLab.Size = new System.Drawing.Size(19, 16);
+            this.solLab.TabIndex = 15;
+            this.solLab.Text = "---";
             // 
             // withheldCalc
             // 
@@ -594,7 +636,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel usercon;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox withbox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label wTaxPer;
@@ -628,5 +670,9 @@
         private System.Windows.Forms.Button Vbtn;
         private System.Windows.Forms.CheckBox semiCheck;
         private System.Windows.Forms.ComboBox monthBox;
+        private System.Windows.Forms.Button subtn;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label solLab;
     }
 }

@@ -205,7 +205,7 @@
             this.DecTax.AutoSize = true;
             this.DecTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DecTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DecTax.Location = new System.Drawing.Point(46, 39);
+            this.DecTax.Location = new System.Drawing.Point(29, 38);
             this.DecTax.Name = "DecTax";
             this.DecTax.Size = new System.Drawing.Size(19, 15);
             this.DecTax.TabIndex = 23;
@@ -236,7 +236,7 @@
             this.NovTax.AutoSize = true;
             this.NovTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NovTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.NovTax.Location = new System.Drawing.Point(42, 39);
+            this.NovTax.Location = new System.Drawing.Point(25, 38);
             this.NovTax.Name = "NovTax";
             this.NovTax.Size = new System.Drawing.Size(19, 15);
             this.NovTax.TabIndex = 21;
@@ -267,7 +267,7 @@
             this.OctTax.AutoSize = true;
             this.OctTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OctTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.OctTax.Location = new System.Drawing.Point(44, 39);
+            this.OctTax.Location = new System.Drawing.Point(27, 39);
             this.OctTax.Name = "OctTax";
             this.OctTax.Size = new System.Drawing.Size(19, 15);
             this.OctTax.TabIndex = 19;
@@ -298,7 +298,7 @@
             this.SepTax.AutoSize = true;
             this.SepTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SepTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.SepTax.Location = new System.Drawing.Point(44, 39);
+            this.SepTax.Location = new System.Drawing.Point(27, 39);
             this.SepTax.Name = "SepTax";
             this.SepTax.Size = new System.Drawing.Size(19, 15);
             this.SepTax.TabIndex = 17;
@@ -329,7 +329,7 @@
             this.JunTax.AutoSize = true;
             this.JunTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JunTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.JunTax.Location = new System.Drawing.Point(46, 39);
+            this.JunTax.Location = new System.Drawing.Point(29, 39);
             this.JunTax.Name = "JunTax";
             this.JunTax.Size = new System.Drawing.Size(19, 15);
             this.JunTax.TabIndex = 11;
@@ -360,7 +360,7 @@
             this.AugTax.AutoSize = true;
             this.AugTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AugTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AugTax.Location = new System.Drawing.Point(43, 38);
+            this.AugTax.Location = new System.Drawing.Point(26, 38);
             this.AugTax.Name = "AugTax";
             this.AugTax.Size = new System.Drawing.Size(19, 15);
             this.AugTax.TabIndex = 15;
@@ -391,7 +391,7 @@
             this.JulTax.AutoSize = true;
             this.JulTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JulTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.JulTax.Location = new System.Drawing.Point(44, 38);
+            this.JulTax.Location = new System.Drawing.Point(27, 38);
             this.JulTax.Name = "JulTax";
             this.JulTax.Size = new System.Drawing.Size(19, 15);
             this.JulTax.TabIndex = 13;
@@ -422,7 +422,7 @@
             this.AprTax.AutoSize = true;
             this.AprTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AprTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AprTax.Location = new System.Drawing.Point(44, 39);
+            this.AprTax.Location = new System.Drawing.Point(27, 39);
             this.AprTax.Name = "AprTax";
             this.AprTax.Size = new System.Drawing.Size(19, 15);
             this.AprTax.TabIndex = 7;
@@ -453,7 +453,7 @@
             this.MayTax.AutoSize = true;
             this.MayTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MayTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MayTax.Location = new System.Drawing.Point(42, 39);
+            this.MayTax.Location = new System.Drawing.Point(25, 39);
             this.MayTax.Name = "MayTax";
             this.MayTax.Size = new System.Drawing.Size(19, 15);
             this.MayTax.TabIndex = 9;
@@ -491,6 +491,7 @@
             this.IncTax.Size = new System.Drawing.Size(27, 20);
             this.IncTax.TabIndex = 8;
             this.IncTax.Text = "---";
+            this.IncTax.Click += new System.EventHandler(this.IncTax_Click);
             // 
             // label9
             // 
@@ -507,7 +508,7 @@
             this.MarTax.AutoSize = true;
             this.MarTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MarTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MarTax.Location = new System.Drawing.Point(44, 39);
+            this.MarTax.Location = new System.Drawing.Point(27, 39);
             this.MarTax.Name = "MarTax";
             this.MarTax.Size = new System.Drawing.Size(19, 15);
             this.MarTax.TabIndex = 5;
@@ -538,7 +539,7 @@
             this.FebTax.AutoSize = true;
             this.FebTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FebTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.FebTax.Location = new System.Drawing.Point(43, 39);
+            this.FebTax.Location = new System.Drawing.Point(26, 39);
             this.FebTax.Name = "FebTax";
             this.FebTax.Size = new System.Drawing.Size(19, 15);
             this.FebTax.TabIndex = 3;
@@ -569,7 +570,7 @@
             this.JanTax.AutoSize = true;
             this.JanTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.JanTax.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.JanTax.Location = new System.Drawing.Point(44, 39);
+            this.JanTax.Location = new System.Drawing.Point(27, 39);
             this.JanTax.Name = "JanTax";
             this.JanTax.Size = new System.Drawing.Size(19, 15);
             this.JanTax.TabIndex = 1;
@@ -600,7 +601,7 @@
             this.conpan.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.conpan.Controls.Add(this.logout);
             this.conpan.Controls.Add(this.settings);
-            this.conpan.Location = new System.Drawing.Point(794, 40);
+            this.conpan.Location = new System.Drawing.Point(794, 36);
             this.conpan.Name = "conpan";
             this.conpan.Size = new System.Drawing.Size(145, 125);
             this.conpan.TabIndex = 16;

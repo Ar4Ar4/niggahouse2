@@ -26,3 +26,4 @@ C:\Users\User\Source\Repos\niggahouse2\WindowsFormsApplication1\WindowsFormsAppl
 C:\Users\User\source\repos\niggahouse2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Calculator.resources
 C:\Users\User\source\repos\niggahouse2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Planner.resources
 C:\Users\User\source\repos\niggahouse2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.withheldCalc.resources
+C:\Users\User\source\repos\niggahouse2\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\Database2.mdb
